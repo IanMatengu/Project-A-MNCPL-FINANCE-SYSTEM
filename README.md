@@ -10,7 +10,7 @@ Programming Language: ANSI C (C99)
 
 ## 2. Group Number
 
-+ Group Number: 16
+Group Number: 16
 
 ## 3. Group Members
 
