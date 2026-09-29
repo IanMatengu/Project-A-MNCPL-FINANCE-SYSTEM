@@ -16,13 +16,13 @@ Group Number: 16
 
 |No. | Student Name | Student Number | Github Username | Responsibility
 |--|---|---|---|--|
-| 1  |  |  |  |Employee Management |
-| 2 |  |  |  |Budget Management |
+| 1  |  |  | |Employee Management |
+| 2 |  |  |Nayshabooysen   |Budget Management |
 |  3|  |  |  |Supplier Management |
 |  4|  |  |  |Asset Management |
-|  5|  |  |  |Reports |
-|  6|  |  |  |Functions, Integration and Validation |
-|7| Ian Matengu|220075964 |IanMatengu |Testing, Documentation and Git Coordination |
+|  5|  |  |  |Reports ||
+|  6|  |  |NelisiwePhiri|Functions, Integration and Validation |  
+|7| Ian Matengu|220075964 |IanMatengu |Testing, Documentation and Git Coordination |   
 
 
 ## 4. Project Description
