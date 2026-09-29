@@ -2,7 +2,8 @@
 #define BUDGET_H
 
 void budgetMenu();
-void addBudget();
-void viewBudgets();
-
+void enterBudget();
+void enterExpenditure();
+void displayBudget();
+void checkExceeded();
 #endif
