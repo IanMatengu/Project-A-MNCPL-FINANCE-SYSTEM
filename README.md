@@ -1,6 +1,6 @@
-# Project-A: Municipal Financial Management System
+# Project A: Municipal Financial Management System
 
-## 1. Project Title
+## 1. Project Information
 
 **Municipal Financial Management System (MFMS)**
 
