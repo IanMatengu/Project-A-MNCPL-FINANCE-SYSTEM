@@ -12,10 +12,10 @@ Programming Language: ANSI C (C99)
 
 Group Number: 16
 
-## 3. Group Members
+## 3. Group Members & Responsibilty
 
-|No. | Student Name | Student Number | Github Username |
-|--|---|---|---|
+|No. | Student Name | Student Number | Github Username | Responsibility
+|--|---|---|---|--|
 | 1  |  |  |  |
 | 2 |  |  |  |
 |  3|  |  |  |
@@ -95,6 +95,7 @@ gcc -std=c99 -Wall -Wextra *.c -o mfms.exe
 ```powershell
 .\mfms.exe
 ```
+<!-- here lies a comment number the document accordingly 
 ## 8. Group Members and Responsibilities
 
 |No .|Student Name| Responsibility | Student Number | GitHub Username |
@@ -106,8 +107,8 @@ gcc -std=c99 -Wall -Wextra *.c -o mfms.exe
 |5|  name| Reports  |  |  |
 |6|  name| Functions, Integration and Validation  |  |  |
 |7|Ian Matengu| Documentation, Testing and Git Coordination |220075964 |IanMatengu |
-
-## 9. Testing
+-->
+## 8. Testing
 
 Testing will be performed to verify that the system:
 
@@ -121,7 +122,7 @@ Testing will be performed to verify that the system:
 Testing records will be updated as features are implemented.
 
 
-## 10. Version Control and Collaboration
+## 9. Version Control and Collaboration
 
 Git and GitHub will be used to manage source code,
 track individual contributions, and coordinate development.
@@ -130,7 +131,7 @@ All group members are expected to contribute code,
 participate in testing, and maintain identifiable
 contributions to the repository.
 
-## 11. Project Status
+## 10. Project Status
 
 **Current Status:** Initial repository setup and planning.
 
