@@ -107,6 +107,20 @@ gcc -std=c99 -Wall -Wextra *.c -o mfms.exe
 |6|  name| Functions, Integration and Validation  |  |  |
 |7|Ian Matengu| Documentation, Testing and Git Coordination |220075964 |IanMatengu |
 
+## 9. Testing
+
+Testing will be performed to verify that the system:
+
+- Accepts valid user input.
+- Handles invalid menu choices.
+- Rejects negative salary and budget values.
+- Correctly calculates salary and budget information.
+- Correctly searches for employees, suppliers, and assets.
+- Generates accurate reports.
+
+Testing records will be updated as features are implemented.
+
+
 ## 10. Version Control and Collaboration
 
 Git and GitHub will be used to manage source code,
