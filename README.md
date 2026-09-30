@@ -21,7 +21,7 @@ Group Number: 16
 |  3|  |  |  |Supplier Management |
 |  4|  |  |  |Asset Management |
 |  5|  |  |  |Reports ||
-|  6|  |  |225002701-phiri|Functions, Integration and Validation |  
+|  6| Nelisiwe Phiri |225002701  |225002701-phiri|Functions, Integration and Validation |  
 |7| Ian Matengu|220075964 |IanMatengu |Testing, Documentation and Git Coordination |   
 
 
