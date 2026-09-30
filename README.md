@@ -18,7 +18,7 @@ Group Number: 16
 |--|---|---|---|--|
 | 1  |  |  | |Employee Management |
 | 2 |  |  |Nayshabooysen   |Budget Management |
-|  3|  |  |  |Supplier Management |
+|  3|Lucas P.H  | 223106003 | pandulo100-dot |Supplier Management |
 |  4|  |  |  |Asset Management |
 |  5|  |  |  |Reports ||
 |  6| Nelisiwe Phiri |225002701  |225002701-phiri|Functions, Integration and Validation |  
