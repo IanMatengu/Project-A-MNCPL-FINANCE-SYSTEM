@@ -103,7 +103,7 @@ gcc -std=c99 -Wall -Wextra *.c -o mfms.exe
 |-|--|---|---|---|
 |1| name  |Employee Management  |  |  |
 |2| name | Budget Management |  |  |
-|3|  name| Supplier Management |  |  |
+|3|  Lucas P H name|Supplier Management |223106003  |pandulo100-dot  |
 |4|  name| Asset Management |  |  |
 |5|  name| Reports  |  |  |
 |6|  name| Functions, Integration and Validation  |  |  |
