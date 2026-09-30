@@ -2,66 +2,54 @@
 #include <string.h>
 #include "budget.h"
 
-char departments[100][50];
-float allocated[100];
-float expenditure[100];
-int count = 0;
+static Budget budgets[MAX_BUDGETS];
+static int count = 0;
 
-void budgetMenu() {
-    int choice;
-    do {
-        printf("\n BUDGET MANAGEMENT \n");
-        printf("1. Enter departmental budget\n");
-        printf("2. Enter expenditure\n");
-        printf("3. Display budget information\n");
-        printf("4. Identify exceeded budgets\n");
-        printf("0. Back\n");
-        printf("Choice: ");
-        scanf("%d", &choice);
-
-        if(choice == 1) enterBudget();
-        else if(choice == 2) enterExpenditure();
-        else if(choice == 3) displayBudget();
-        else if(choice == 4) checkExceeded();
-
-    } while(choice!= 0);
-}
-
-void enterBudget() {
-    printf("Department: ");
-    scanf("%s", departments[count]);
-    printf("Allocated Budget: N$");
-    scanf("%f", &allocated[count]);
-    expenditure[count] = 0;
-    count++;
+void addBudget() {
+    if (count >= MAX_BUDGETS) {
+        printf("Budget storage full!\n");
+        return;
+    }
+    Budget b;
+    printf("Enter Department ID: ");
+    scanf("%d", &b.departmentId);
+    getchar();
+    printf("Enter Department Name: ");
+    fgets(b.departmentName, MAX_NAME_LEN, stdin);
+    b.departmentName[strcspn(b.departmentName, "\n")] = 0;
+    if (strlen(b.departmentName) == 0) {
+        printf("Error: Department name cannot be empty.\n");
+        return;
+    }
+    printf("Enter Allocated Budget: ");
+    scanf("%f", &b.allocatedBudget);
+    if (b.allocatedBudget < 0) {
+        printf("Error: Negative budget not accepted.\n");
+        return;
+    }
+    printf("Enter Expenditure: ");
+    scanf("%f", &b.expenditure);
+    if (b.expenditure < 0) {
+        printf("Error: Negative expenditure not accepted.\n");
+        return;
+    }
+    budgets[count++] = b;
     printf("Budget added!\n");
 }
 
-void enterExpenditure() {
-    char dept[50];
-    printf("Department: ");
-    scanf("%s", dept);
-    for(int i=0; i<count; i++) {
-        if(strcmp(departments[i], dept) == 0) {
-            printf("Expenditure: N$");
-            float exp;
-            scanf("%f", &exp);
-            expenditure[i] += exp;
-            printf("Expenditure added!\n");
-            return;
-        }
-    }
-    printf("Department not found!\n");
-}
-
 void displayBudget() {
-    for(int i=0; i<count; i++) {
-        float remaining = allocated[i] - expenditure[i];
-        printf("\nDepartment: %s\n", departments[i]);
-        printf("Allocated Budget: N$%.2f\n", allocated[i]);
-        printf("Expenditure: N$%.2f\n", expenditure[i]);
-        printf("Remaining Budget: N$%.2f\n", remaining);
-        if(expenditure[i] <= allocated[i]) {
+    int i;
+    if (count == 0) {
+        printf("No budgets to display.\n");
+        return;
+    }
+    for ( i = 0; i < count; i++) {
+        float remaining = budgets[i].allocatedBudget - budgets[i].expenditure;
+        printf("\nDepartment: %s (ID:%d)\n", budgets[i].departmentName, budgets[i].departmentId);
+        printf("Allocated: %.2f\n", budgets[i].allocatedBudget);
+        printf("Expenditure: %.2f\n", budgets[i].expenditure);
+        printf("Remaining: %.2f\n", remaining);
+        if (budgets[i].expenditure <= budgets[i].allocatedBudget) {
             printf("Status: WITHIN BUDGET\n");
         } else {
             printf("Status: EXCEEDED BUDGET\n");
@@ -69,14 +57,31 @@ void displayBudget() {
     }
 }
 
-void checkExceeded() {
-    printf("\n Departments that EXCEEDED budget \n");
+float calculateBudgetBalance(int departmentId) {
+    int i;
+    for ( i = 0; i < count; i++) {
+        if (budgets[i].departmentId == departmentId) {
+            float remaining = budgets[i].allocatedBudget - budgets[i].expenditure;
+            printf("Department %s Remaining: %.2f\n", budgets[i].departmentName, remaining);
+            return remaining;
+        }
+    }
+    printf("Department ID %d not found!\n", departmentId);
+    return 0;
+}
+
+void checkExceed() {
+    printf("\nDepartments that EXCEEDED budget\n");
+    int i;
     int found = 0;
-    for(int i=0; i<count; i++) {
-        if(expenditure[i] > allocated[i]) {
-            printf("%s - Allocated: N$%.2f, Spent: N$%.2f\n", departments[i], allocated[i], expenditure[i]);
+    for ( i = 0; i < count; i++) {
+        if (budgets[i].expenditure > budgets[i].allocatedBudget) {
+            printf("%s (ID:%d) - Allocated: %.2f, Spent: %.2f, Over: %.2f\n",
+                   budgets[i].departmentName, budgets[i].departmentId,
+                   budgets[i].allocatedBudget, budgets[i].expenditure,
+                   budgets[i].expenditure - budgets[i].allocatedBudget);
             found = 1;
         }
     }
-    if(found == 0) printf("None - All within budget\n");
+    if (found == 0) printf("None - All within budget\n");
 }
