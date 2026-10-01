@@ -1,9 +1,32 @@
 #include <stdio.h>
 #include <string.h>
+#include <ctype.h>
 #include "suppliers.h"
 
 Supplier suppliers[MAX_SUPPLIERS];
 int supplierCount = 0;
+
+static int readNonEmptyInput(const char *prompt, char *buffer, size_t size)
+{
+    printf("%s", prompt);
+
+    if (fgets(buffer, size, stdin) == NULL)
+    {
+        return 0;
+    }
+
+    buffer[strcspn(buffer, "\n")] = '\0';
+
+    for (size_t i = 0; buffer[i] != '\0'; i++)
+    {
+        if (!isspace((unsigned char)buffer[i]))
+        {
+            return 1;
+        }
+    }
+
+    return 0;
+}
 
 void addSupplier()
 {
@@ -15,35 +38,45 @@ void addSupplier()
 
     printf("\n--- ADD SUPPLIER ---\n");
 
-    printf("Enter Supplier ID: ");
-    fgets(suppliers[supplierCount].supplierID,
-          sizeof(suppliers[supplierCount].supplierID), stdin);
-    suppliers[supplierCount].supplierID[
-        strcspn(suppliers[supplierCount].supplierID, "\n")] = '\0';
+    if (!readNonEmptyInput("Enter Supplier ID: ",
+                           suppliers[supplierCount].supplierID,
+                           sizeof(suppliers[supplierCount].supplierID)))
+    {
+        printf("Supplier ID cannot be empty.\n");
+        return;
+    }
 
-    printf("Enter Supplier Name: ");
-    fgets(suppliers[supplierCount].supplierName,
-          sizeof(suppliers[supplierCount].supplierName), stdin);
-    suppliers[supplierCount].supplierName[
-        strcspn(suppliers[supplierCount].supplierName, "\n")] = '\0';
+    if (!readNonEmptyInput("Enter Supplier Name: ",
+                           suppliers[supplierCount].supplierName,
+                           sizeof(suppliers[supplierCount].supplierName)))
+    {
+        printf("Supplier Name cannot be empty.\n");
+        return;
+    }
 
-    printf("Enter Email: ");
-    fgets(suppliers[supplierCount].email,
-          sizeof(suppliers[supplierCount].email), stdin);
-    suppliers[supplierCount].email[
-        strcspn(suppliers[supplierCount].email, "\n")] = '\0';
+    if (!readNonEmptyInput("Enter Email: ",
+                           suppliers[supplierCount].email,
+                           sizeof(suppliers[supplierCount].email)))
+    {
+        printf("Email cannot be empty.\n");
+        return;
+    }
 
-    printf("Enter Telephone Number: ");
-    fgets(suppliers[supplierCount].telephone,
-          sizeof(suppliers[supplierCount].telephone), stdin);
-    suppliers[supplierCount].telephone[
-        strcspn(suppliers[supplierCount].telephone, "\n")] = '\0';
+    if (!readNonEmptyInput("Enter Telephone Number: ",
+                           suppliers[supplierCount].telephone,
+                           sizeof(suppliers[supplierCount].telephone)))
+    {
+        printf("Telephone Number cannot be empty.\n");
+        return;
+    }
 
-    printf("Enter Town/Location: ");
-    fgets(suppliers[supplierCount].town,
-          sizeof(suppliers[supplierCount].town), stdin);
-    suppliers[supplierCount].town[
-        strcspn(suppliers[supplierCount].town, "\n")] = '\0';
+    if (!readNonEmptyInput("Enter Town/Location: ",
+                           suppliers[supplierCount].town,
+                           sizeof(suppliers[supplierCount].town)))
+    {
+        printf("Town/Location cannot be empty.\n");
+        return;
+    }
 
     supplierCount++;
 
@@ -78,10 +111,14 @@ void searchSupplier()
     char searchName[100];
 
     printf("\n--- SEARCH SUPPLIER ---\n");
-    printf("Enter supplier name: ");
 
-    fgets(searchName, sizeof(searchName), stdin);
-    searchName[strcspn(searchName, "\n")] = '\0';
+    if (!readNonEmptyInput("Enter supplier name: ",
+                           searchName,
+                           sizeof(searchName)))
+    {
+        printf("Supplier name cannot be empty.\n");
+        return;
+    }
 
     for (int i = 0; i < supplierCount; i++)
     {
@@ -107,13 +144,21 @@ void compareSuppliers()
 
     printf("\n--- COMPARE SUPPLIERS ---\n");
 
-    printf("Enter first supplier name: ");
-    fgets(firstName, sizeof(firstName), stdin);
-    firstName[strcspn(firstName, "\n")] = '\0';
+    if (!readNonEmptyInput("Enter first supplier name: ",
+                           firstName,
+                           sizeof(firstName)))
+    {
+        printf("First supplier name cannot be empty.\n");
+        return;
+    }
 
-    printf("Enter second supplier name: ");
-    fgets(secondName, sizeof(secondName), stdin);
-    secondName[strcspn(secondName, "\n")] = '\0';
+    if (!readNonEmptyInput("Enter second supplier name: ",
+                           secondName,
+                           sizeof(secondName)))
+    {
+        printf("Second supplier name cannot be empty.\n");
+        return;
+    }
 
     int firstFound = -1;
     int secondFound = -1;
