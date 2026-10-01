@@ -157,4 +157,7 @@ void employeeMenu()
                 printf("\nInvalid choice. Please enter 1 to 4.\n");
         }
     } while (choice != 4);
+
+    return 0;
 }
+
