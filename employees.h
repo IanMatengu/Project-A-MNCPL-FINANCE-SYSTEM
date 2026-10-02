@@ -12,7 +12,7 @@ extern double housingAllowances[MAX_EMPLOYEES];
 extern double transportAllowances[MAX_EMPLOYEES];
 extern double grossSalaries[MAX_EMPLOYEES];
 
-void employeeMenu();
+
 void addEmployee();
 void displayEmployees();
 void searchEmployee();
