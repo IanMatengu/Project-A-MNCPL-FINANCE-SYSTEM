@@ -19,7 +19,7 @@ Group Number: 16
 | 1  |  |  | |Employee Management |
 | 2 |  Naysha Booysen|  |Nayshabooysen   |Budget Management |
 |  3|Lucas P.H  | 223106003 | pandulo100-dot |Supplier Management |
-|  4|  |  |  |Asset Management |
+|  4|  Luvinga Nominaanda | 226094987  | Noms105 |Asset Management |
 |  5| Angelo Swartbooi | 225020300 |  |Reports ||
 |  6| Nelisiwe Phiri |225002701  |225002701-phiri|Functions, Integration and Validation |  
 |7| Ian Matengu|220075964 |IanMatengu |Testing, Documentation and Git Coordination |   
@@ -69,7 +69,7 @@ The system is designed to include the following features:
 Ensure that the following tools are installed:
 
 - GCC compiler
-- Visual Studio Code or another C-compatible editor
+- Visual Studio Code or Other preferred code editor
 
 ### Compile the program
 
@@ -77,11 +77,12 @@ Open a terminal in the project directory and run:
 
 - Bash
 ```bash
-gcc -std=c99 -Wall -Wextra *.c -o mfms
+gcc main.c assets.c budget.c employees.c reports.c suppliers.c -o mfms
 ```
 - Powershell
 ```Powershell
-gcc -std=c99 -Wall -Wextra *.c -o mfms.exe
+
+gcc main.c assets.c budget.c employees.c reports.c suppliers.c -o mfms.exe
 ```
 ## 7. How to Run the System
 
