@@ -4,8 +4,10 @@
 
 **Municipal Financial Management System (MFMS)**
 
-Course: PAP521S – Programming in Practice  
+Course: PAP521S – Programming in Practice 
+
 Project: Project A 
+
 Programming Language: C 
 
 ## 2. Group Number
@@ -16,7 +18,7 @@ Group Number: 16
 
 |No. | Student Name | Student Number | Github Username | Responsibility
 |--|---|---|---|--|
-| 1  |  |  | |Employee Management |
+| 1  | Motjari Hukununa | 225072068 |motjari |Employee Management |
 | 2 |  Naysha Booysen| 225070790 |Nayshabooysen   |Budget Management |
 |  3|Lucas P.H  | 223106003 | pandulo100-dot |Supplier Management |
 |  4|  Luvinga Nominaanda | 226094987  | Noms105 |Asset Management |
