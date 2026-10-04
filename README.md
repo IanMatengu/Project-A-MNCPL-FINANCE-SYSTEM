@@ -17,10 +17,10 @@ Group Number: 16
 |No. | Student Name | Student Number | Github Username | Responsibility
 |--|---|---|---|--|
 | 1  |  |  | |Employee Management |
-| 2 |  |  |Nayshabooysen   |Budget Management |
+| 2 |  Naysha Booysen|  |Nayshabooysen   |Budget Management |
 |  3|Lucas P.H  | 223106003 | pandulo100-dot |Supplier Management |
 |  4|  |  |  |Asset Management |
-|  5|  |  |  |Reports ||
+|  5| Angelo Swartbooi | 225020300 |  |Reports ||
 |  6| Nelisiwe Phiri |225002701  |225002701-phiri|Functions, Integration and Validation |  
 |7| Ian Matengu|220075964 |IanMatengu |Testing, Documentation and Git Coordination |   
 
