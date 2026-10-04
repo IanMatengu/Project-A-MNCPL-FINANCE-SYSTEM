@@ -2,6 +2,8 @@
 #include "employees.h"
 #include "budget.h"
 #include "suppliers.h"
+#include "assets.h"
+#include "reports.h"
 
 
 int getInteger()
@@ -205,6 +207,97 @@ void displayMenu()
 
 
 
+void assetMenu()
+{
+    int choice;
+
+    do
+    {
+        printf("\n========================================\n");
+        printf("          ASSET MANAGEMENT\n");
+        printf("========================================\n");
+        printf("1. Add Asset\n");
+        printf("2. Display Assets\n");
+        printf("3. Search Asset\n");
+        printf("4. Back to Main Menu\n");
+        printf("========================================\n");
+
+        printf("Enter your choice: ");
+        choice = getMenuChoice(1, 4);
+
+        switch (choice)
+        {
+            case 1:
+                addAsset();
+                break;
+
+            case 2:
+                displayAssets();
+                break;
+
+            case 3:
+                searchAsset();
+                break;
+
+            case 4:
+                printf("\nReturning to main menu...\n");
+                break;
+        }
+
+    } while (choice != 4);
+}
+
+
+
+void reportsMenu()
+{
+    int choice;
+
+    do
+    {
+        printf("\n");
+        printf("========================================\n");
+        printf("              REPORTS\n");
+        printf("========================================\n");
+        printf("1. Employee Report\n");
+        printf("2. Budget Report\n");
+        printf("3. Supplier Report\n");
+        printf("4. Asset Report\n");
+        printf("5. Back to Main Menu\n");
+        printf("========================================\n");
+
+        printf("Enter your choice: ");
+        choice = getMenuChoice(1, 5);
+
+        switch (choice)
+        {
+            case 1:
+                employeeReport();
+                break;
+
+            case 2:
+                budgetReport();
+                break;
+
+            case 3:
+                supplierReport();
+                break;
+
+            case 4:
+                assetReport();
+                break;
+
+            case 5:
+                printf("\nReturning to main menu...\n");
+                break;
+        }
+
+    } while (choice != 5);
+}
+
+
+
+
 int main()
 {
     int choice;
@@ -231,13 +324,11 @@ int main()
                 break;
 
             case 4:
-                /* Asset Management will be added */
-                printf("\nAsset Management module coming soon.\n");
+               assetMenu();
                 break;
 
             case 5:
-                /* Reports module will be added */
-                printf("\nReports module coming soon.\n");
+                reportsMenu();
                 break;
 
             case 6:
