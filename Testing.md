@@ -243,4 +243,62 @@ PASS
 ## Evidence ##
 <img width="1366" height="768" alt="Screenshot_2026-10-19_19-36-22" src="https://github.com/user-attachments/assets/661a1ab5-81cb-480c-b5b8-2d5b9bf5846d" />
 
-# 5. Report Module #
+# 5. Reports Module #
+
+<!--## Test 1: Helper Functions : Average, highest and lowest ##
+
+## Objective ##
+
+To unit test calculateAverage() , findHighest() and findLowest() directly with known arrays, including single value, tied values and an empty array.
+
+## Test Command ##
+
+`` gcc main.c 
+
+-->
+
+## Test 2: Report Menu: All four reports ##
+
+## Objective ##
+
+To verify that displayReports() calls the employee, budget, supplier and asset reports correctly and returns when option 5 is chosen 
+## Test Command ##
+
+`` gcc main.c reports.c employees.c assets.c budget.c suppliers.c -o reporttest
+./reporttest``
+
+## Expected Result ##
+Employee report: 2 employees , average N$ 11500.00, highest N$ 13000.00 (Nelisiwe),lowest N$10000.00 (Luvinga). Budget report: health exceeded by 10000.00. supplier and asset reports list their records. Option 5 prints Returning to main menu.
+
+## Result ##
+PASS
+
+## Evidence ##
+<img width="1366" height="768" alt="Screenshot_2026-10-19_20-09-41" src="https://github.com/user-attachments/assets/8e14d187-c5f7-4469-9cff-8f29081b7545" />
+<img width="1366" height="768" alt="Screenshot_2026-10-19_20-10-47" src="https://github.com/user-attachments/assets/2c517d70-1945-40ba-b346-493dd1abd80e" />
+<img width="1366" height="768" alt="Screenshot_2026-10-19_20-09-47" src="https://github.com/user-attachments/assets/b6314f22-4eb0-4c58-a2e0-8e214888dac3" />
+
+
+<img width="1366" height="768" alt="Screenshot_2026-10-19_20-11-33" src="https://github.com/user-attachments/assets/6f1f777b-5b4b-4cee-b7ca-3b2dcae65fe8" />
+<img width="1366" height="768" alt="Screenshot_2026-10-19_20-11-54" src="https://github.com/user-attachments/assets/b73b1100-df4d-4a43-806d-10bb653f2b8a" />
+
+<img width="1366" height="768" alt="Screenshot_2026-10-19_20-12-03" src="https://github.com/user-attachments/assets/31824d34-4f6c-493e-a86c-74ac8f1a6ddc" />
+
+## Test 3: Report Menu: Invalid Input ##
+
+## Objective ##
+
+To see that displayReports() handles letters and out of range numbers without crashing or looping 
+
+## Expected result ## 
+
+abc prints invalid input. Please enter a number from 1 to 5. pressing 9 gives output "invalid choice".
+Menu should continue as normal
+
+## Result ##
+PASS
+
+## Evidence ## 
+<img width="1366" height="768" alt="Screenshot_2026-10-19_20-26-39" src="https://github.com/user-attachments/assets/99d14ca9-b6ee-4248-9f8c-b51c0fda1d17" />
+
+
