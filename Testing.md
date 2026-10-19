@@ -104,8 +104,39 @@ FAIL: laptop and TRUCK are not found. Names must be typed exactly as entered. se
 <img width="1366" height="768" alt="Screenshot_2026-10-19_16-14-47" src="https://github.com/user-attachments/assets/eeb34456-ad65-4c05-9067-307e7321b26b" />
 <img width="1366" height="768" alt="Screenshot_2026-10-19_16-14-52" src="https://github.com/user-attachments/assets/a041da04-66eb-4114-bf54-a89ff7f763e2" />
 
+## Test 3: Text longer than the field size ##
+## Objective ##
 
+To verify what happens when an asset name is longer than the 50 words/characters
 
+## Expected Result ##
+Name should be cut at the limit and the other fields should stay correct
+
+## Result ##
+
+Fail: The name is not cut or doesnt appear to be, and the leftover characters become the Asset Type and every later field moves one place, so the purchase value is 0.00 
+
+## Evidence ##
+<img width="1366" height="768" alt="Screenshot_2026-10-19_16-27-16" src="https://github.com/user-attachments/assets/86107a37-1df8-4d21-9be5-22fc37d7ddb4" />
+
+# 3. Budget Module #
+
+## Test 1: Add a budget that is within budget ##
+
+## Objective ##
+
+To verify hat addBudget() stores a department budget, stores department budget, and that displayBudget(), checkExceed() and calculateBudgetBalance() report it correctly.
+
+## Test Command ##
+`` gcc main.c budget.c -o budgettest
+./budgettest``
+
+## Expected Result ##
+Remaining is N$ 20000.00, the status is WITHIN BUDGET , checkExceddd() prints NONE - all within budget and the balance is N$ 20000.00
+## Result ##
+PASS
+## Evidence ## 
+<img width="1366" height="768" alt="Screenshot_2026-10-19_16-43-48" src="https://github.com/user-attachments/assets/75113390-ea19-46a3-b160-3af3551cdf4e" />
 
 
 
