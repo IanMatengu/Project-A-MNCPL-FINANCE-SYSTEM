@@ -138,6 +138,21 @@ PASS
 ## Evidence ## 
 <img width="1366" height="768" alt="Screenshot_2026-10-19_16-43-48" src="https://github.com/user-attachments/assets/75113390-ea19-46a3-b160-3af3551cdf4e" />
 
+## Test 2: Add a budget that has been exceedeed ##
+
+## Objective ##
+
+To verify that a department whose expenditure is higher than the its allocation is flagged as exceeded.
+
+## Expected Result ##
+
+Remaining Balance is -5000.50, the status is EXCEEDED BUDGET, checkExceed() lists Roads as over by 5000.50 and the balance is -5000.50
+
+## Result ## 
+PASS
+
+## Evidence ##
+<img width="1366" height="768" alt="Screenshot_2026-10-19_16-52-30" src="https://github.com/user-attachments/assets/2b9cceb5-e9cc-4562-8ca5-39108edae9cf" />
 
 
 
