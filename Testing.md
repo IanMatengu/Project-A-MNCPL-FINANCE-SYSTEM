@@ -182,3 +182,65 @@ PASS
 
 ## Evidence ## 
 <img width="1366" height="768" alt="Screenshot_2026-10-19_17-05-58" src="https://github.com/user-attachments/assets/5d96df94-c71b-4fc8-8dcc-3c63d95fab2b" />
+# 4. Supplier Module #
+
+## Test 1: Add, Display, Search and Compare suppliers ##
+
+## Objective ##
+To verify that addSupplier() stores suppliers, displaySuppliers() list them, searchSupplier() finds one by name, and compareSuppliers() shows two suppliers comparatively.
+
+## Test command ##
+`` gcc main.c suppliers.c -o supplierstest
+./supplierstest``
+
+## Expected Result ## 
+
+Both suppliers are listed. The search finds WHK suppliers. The comparison shows SWK suppliers as supplier 1 and WHK suppliers as supplier 2 
+
+## Result ##
+PASS
+
+## Evidence ##
+<img width="1366" height="768" alt="Screenshot_2026-10-19_19-12-18" src="https://github.com/user-attachments/assets/a1c9e154-e417-4516-8d1a-82f026052aa6" />
+
+<img width="1366" height="768" alt="Screenshot_2026-10-19_19-12-30" src="https://github.com/user-attachments/assets/3951c0a1-d96c-453e-8420-6bd8ce337069" />
+
+## Test 2: Search and compare with a supplier that does not exist
+
+## Objective ## 
+To verify that search Supplier() and compareSupliers() report correctlty when a supplier name is not found
+
+## Expected Result ##
+
+Search should print 'Supplier not Found' and the comparison prints 'One or both suppliers were not found'
+
+## Result ## 
+PASS
+
+## Evidence ##
+
+
+
+<img width="1366" height="768" alt="Screenshot_2026-10-19_19-26-35" src="https://github.com/user-attachments/assets/8cb26137-995e-46a9-a4a1-a56c724632b2" />
+
+<img width="1366" height="768" alt="Screenshot_2026-10-19_19-26-42" src="https://github.com/user-attachments/assets/79b3dcb7-d27e-4d2d-be60-93352786131f" />
+
+
+## Test 3: Empty field is rejected ##
+
+## Objective ##
+
+To see whether addSupplier() rejects an empty supplier name and does not save the record.
+
+## Expected Result ##
+
+First attempt should print Supplier name cannot be empty. Only the second supplier appears in the list.
+
+## Result ##
+
+PASS
+
+## Evidence ##
+<img width="1366" height="768" alt="Screenshot_2026-10-19_19-36-22" src="https://github.com/user-attachments/assets/661a1ab5-81cb-480c-b5b8-2d5b9bf5846d" />
+
+# 5. Report Module #
