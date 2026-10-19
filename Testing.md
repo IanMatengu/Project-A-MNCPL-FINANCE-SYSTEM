@@ -1,9 +1,9 @@
-#1. Employee Management Module #
+# 1. Employee Management Module #
 ## Test 1: Add, Display and Search Employees ##
 ## Objective ##
 To verify that calculateSalary() returns basic + housing + transport, and that addEmployee(), displayEmployees() and searchEmployee() store, list and find employees correctly.
 
-Test Command
+## Test Command ##
 gcc main.c employees.c -o employeestest
 ./employeestest
 
@@ -66,6 +66,26 @@ FAIL: The letters are not rejected. The salary and allowance are stored as 0.00 
 <img width="1366" height="768" alt="Screenshot_2026-10-19_15-34-30" src="https://github.com/user-attachments/assets/792b40e5-1b50-4581-b5cc-0f7f23968c66" />
 
 
+# 2. Asset Management Module# 
+## Test 1: Add, display and search Assets ##
+## Objective ##
+To verify that addAsset() stores asset details, displaysALLAssets() lists them, and searchAssetBYName() finds an existing asset and reports one that does not exist.
+
+## Test command ## 
+``gcc main.c assets.c -o assettest 
+./assettest``
+
+
+## Expected Result ## 
+Both assets are listed with values to 2 decimal places. Searching Laptop shows the asset. Searching Lorry shows asset not found.
+
+## Result ##
+
+Pass
+
+## evidence ##
+<img width="1366" height="768" alt="Screenshot_2026-10-19_15-59-52" src="https://github.com/user-attachments/assets/2eace123-b579-4748-82fd-f8cedbe84f7d" /><img width="1366" height="768" alt="Screenshot_2026-10-19_16-00-19" src="https://github.com/user-attachments/assets/eb4a2411-9e93-469f-a621-dd9317fe87fe" />
+<img width="1366" height="768" alt="Screenshot_2026-10-19_16-00-09" src="https://github.com/user-attachments/assets/c2af58ef-005c-4888-8a7e-7e0fa2963dd0" />
 
 
 
