@@ -4,8 +4,8 @@
 To verify that calculateSalary() returns basic + housing + transport, and that addEmployee(), displayEmployees() and searchEmployee() store, list and find employees correctly.
 
 ## Test Command ##
-gcc main.c employees.c -o employeestest
-./employeestest
+``gcc main.c employees.c -o employeestest
+./employeestest``
 
 ## Expected Result ## 
 
@@ -84,8 +84,29 @@ Both assets are listed with values to 2 decimal places. Searching Laptop shows t
 Pass
 
 ## evidence ##
-<img width="1366" height="768" alt="Screenshot_2026-10-19_15-59-52" src="https://github.com/user-attachments/assets/2eace123-b579-4748-82fd-f8cedbe84f7d" /><img width="1366" height="768" alt="Screenshot_2026-10-19_16-00-19" src="https://github.com/user-attachments/assets/eb4a2411-9e93-469f-a621-dd9317fe87fe" />
+<img width="1366" height="768" alt="Screenshot_2026-10-19_15-59-52" src="https://github.com/user-attachments/assets/2eace123-b579-4748-82fd-f8cedbe84f7d" />
 <img width="1366" height="768" alt="Screenshot_2026-10-19_16-00-09" src="https://github.com/user-attachments/assets/c2af58ef-005c-4888-8a7e-7e0fa2963dd0" />
+
+<img width="1366" height="768" alt="Screenshot_2026-10-19_16-00-19" src="https://github.com/user-attachments/assets/eb4a2411-9e93-469f-a621-dd9317fe87fe" />
+
+## Test 2: Search is Case sensitive ##
+## Objective ##
+To check whether searchAssetByName() finds an asset when the name is typed in a different letter case. 
+
+## Expected Output ##
+Search should not care whether the use of uppercase or lowercase letters when looking for an asset and should find them regardless.
+
+## Result ##
+FAIL: laptop and TRUCK are not found. Names must be typed exactly as entered. search makes use of strcmp.
+
+## Evidence ##
+
+<img width="1366" height="768" alt="Screenshot_2026-10-19_16-14-47" src="https://github.com/user-attachments/assets/eeb34456-ad65-4c05-9067-307e7321b26b" />
+<img width="1366" height="768" alt="Screenshot_2026-10-19_16-14-52" src="https://github.com/user-attachments/assets/a041da04-66eb-4114-bf54-a89ff7f763e2" />
+
+
+
+
 
 
 
