@@ -154,5 +154,31 @@ PASS
 ## Evidence ##
 <img width="1366" height="768" alt="Screenshot_2026-10-19_16-52-30" src="https://github.com/user-attachments/assets/2b9cceb5-e9cc-4562-8ca5-39108edae9cf" />
 
+## Test 3: Negative allocated budget is rejected ##
+
+## Objective ##
+To verify that addbudget() refuses a negative allocated budget and does not save the record
+
+## Expected Result ## 
+System should display Error: Negative budget not accepted and 'No budget items to display. System should dsiplay Department ID 1 not found!. 
+## Result ##
+PASS
+##Evidence ## 
+<img width="1366" height="768" alt="Screenshot_2026-10-19_17-01-10" src="https://github.com/user-attachments/assets/cc0f2624-cc35-486d-b616-f6aab353efac" />
 
 
+## Test 4: Empty department name is rejected ##
+
+## Objective ## 
+
+To verify that addBudget() refuses to accept an empty department name
+
+## Expected result ##
+System displays 'Error: Department Name cannot be empty.'
+
+## Result ## 
+
+PASS
+
+## Evidence ## 
+<img width="1366" height="768" alt="Screenshot_2026-10-19_17-05-58" src="https://github.com/user-attachments/assets/5d96df94-c71b-4fc8-8dcc-3c63d95fab2b" />
