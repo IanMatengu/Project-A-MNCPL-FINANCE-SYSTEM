@@ -44,7 +44,27 @@ The system should display: Employee not found
 ## Result ##
 
 ## Evidence ##
-<img width="1366" height="768" alt="Screenshot_2026-10-19_15-23-31" src="https://github.com/user-attachments/assets/f6b9c41f-2579-465b-9b0a-8e0912a5cbc2" />
+
+
+<img width="1366" height="768" alt="Screenshot_2026-10-19_15-23-39" src="https://github.com/user-attachments/assets/d406a238-75b0-4b33-95e3-9b5d8e25bd27" />
+
+
+## Test 4: Non-numeric salary input ##
+
+## objective ## 
+
+To check how addEmployee() behave when letters are typed where a number is expecrted. 
+
+## Expected Result ##
+The system should ask for a letter and ask for a number again.
+
+## Resullt## 
+FAIL: The letters are not rejected. The salary and allowance are stored as 0.00 and the employee is added.
+
+## Evidence ##
+<img width="1366" height="768" alt="Screenshot_2026-10-19_15-34-23" src="https://github.com/user-attachments/assets/4aae41dc-f450-42c7-83d0-f7a13c4f34af" />
+<img width="1366" height="768" alt="Screenshot_2026-10-19_15-34-30" src="https://github.com/user-attachments/assets/792b40e5-1b50-4581-b5cc-0f7f23968c66" />
+
 
 
 
