@@ -1,6 +1,6 @@
 #include <stdio.h>
 #include <string.h>
-#include <assests.h>
+#include "assets.h"
 
 int assetID[50];
 char assetName[50][50];
