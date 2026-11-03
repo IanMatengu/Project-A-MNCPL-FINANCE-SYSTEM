@@ -10,19 +10,23 @@ int getInteger()
 {
     int number;
     int result;
-
+    int ch;
+    
     while (1)
     {
         result = scanf("%d", &number);
 
         if (result == 1)
         {
+            while ((ch = getchar()) != '\n' && ch != EOF);  
             return number;
         }
 
         printf("Invalid input. Please enter a number: ");
 
-        while (getchar() != '\n');
+      //  while (getchar() != '\n'); //
+
+         while ((ch = getchar()) != '\n' && ch != EOF);  
     }
 }
 
